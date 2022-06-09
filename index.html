@@ -6,8 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital@1&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h1>Calculator Test</h1>
+    </header>
+    <div class="container">
+        <div class="main-title">
+            Calculator
+        </div>
+        <table>
+            <tr>
+                <td colspan="4"><input class="display" type="text" id="screen" disabled></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="clickValue(`+`)">+</button></td>
+                <td><button class="btn" onclick="clickValue(`-`)">-</button></td>
+                <td><button class="btn" onclick="clickValue(`*`)">x</button></td>
+                <td><button class="btn" onclick="clickValue(`/`)">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="clickValue(`7`)">7</button></td>
+                <td><button class="btn" onclick="clickValue(`8`)">8</button></td>
+                <td><button class="btn" onclick="clickValue(`9`)">9</button></td>
+                <td rowspan="3"><button class="btn" onclick="calculate()">=</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="clickValue(`4`)">4</button></td>
+                <td><button class="btn" onclick="clickValue(`5`)">5</button></td>
+                <td><button class="btn" onclick="clickValue(`6`)">6</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="clickValue(`1`)">1</button></td>
+                <td><button class="btn" onclick="clickValue(`2`)">2</button></td>
+                <td><button class="btn" onclick="clickValue(`3`)">3</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn" onclick="clickValue(`0`)">0</button></td>
+                <td colspan="2"><button class="btn" id="clear" onclick="screenClear()">C</button></td>
+            </tr>
+        </table> 
+    </div>
     
     <script src="./app.js"></script>
 </body>
